@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    padding: 48px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+input,
+button {
+    font: inherit;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#message {
+    background-color: #eff6ff;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#message:empty {
+    display: none;
+}
+
+#advice {
+    background-color: #fff7ed;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#advice:empty {
+    display: none;
+}
