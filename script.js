@@ -84,7 +84,7 @@ form.addEventListener("submit", async function (event) {
                 + weatherDescription
                 + " / "
                 + temperature
-                +" "
+                + " "
                 + weatherData.current_units.temperature_2m
                 + " / 風速: "
                 + windSpeed
