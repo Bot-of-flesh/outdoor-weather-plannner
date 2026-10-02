@@ -1,7 +1,7 @@
 const button = document.querySelector("button");
 const cityInput = document.querySelector("#city");
 const form = document.querySelector("#weather-form");
-// Open-Meteo returns a number; this table turns it into a Japanese description.
+// Open-Meteoは数値コードを天気として返しますが、それを日本語に変換します。
 const weatherDescriptions = {
     0: "快晴",
     1: "晴れ",
@@ -54,7 +54,6 @@ form.addEventListener("submit", async function (event) {
                 throw new Error("地域の検索に失敗しました");
             }
             const data = await response.json();
-            console.log(data);
             if (data.length === 0) {
                 message.textContent = "地域が見つかりませんでした。"
                 return;
@@ -65,8 +64,6 @@ form.addEventListener("submit", async function (event) {
                 latitude: result.geometry.coordinates[1],
                 longitude: result.geometry.coordinates[0]
             };
-            console.log(place.latitude, place.longitude);
-            console.log(city);
             const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude="
                 + place.latitude
                 + "&longitude="
@@ -77,7 +74,6 @@ form.addEventListener("submit", async function (event) {
                 throw new Error("天気の取得に失敗しました")
             }
             const weatherData = await weatherResponse.json();
-            console.log(weatherData);
             //weatherData.current.temperature_2m = 30;
             const temperature = weatherData.current.temperature_2m;
             const windSpeed = weatherData.current.wind_speed_10m;
