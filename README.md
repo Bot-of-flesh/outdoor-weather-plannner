@@ -5,7 +5,7 @@ HTML・CSS・JavaScriptとAPI通信を学ぶために制作しました。
 
 ## デモ
 
-GitHub Pagesで公開後、ここにURLを追加します。
+https://bot-of-flesh.github.io/outdoor-weather-plannner/
 
 ## 主な機能
 
